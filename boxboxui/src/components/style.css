@@ -1,0 +1,25 @@
+/* Add any global styles here */
+
+.team-tiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.team-tile {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.team-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.team-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
