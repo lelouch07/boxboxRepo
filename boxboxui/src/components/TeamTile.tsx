@@ -1,7 +1,8 @@
 // src/components/TeamTile.tsx
 import React from 'react';
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export interface TeamTileProps {
     teamName: string;
@@ -9,9 +10,14 @@ export interface TeamTileProps {
 }
 
 const TeamTile: React.FC<TeamTileProps> = ({ teamName, thumbnail }) => {
+    const navigate = useNavigate();
+
+    const handleTeamClick = () => {
+        navigate(`/team/${teamName}`);
+    };
     return (
-        <Link to={`/teams/${teamName}`} style={{ textDecoration: 'none' }}>
-            <Card sx={{ maxWidth: 345 }}>
+        
+            <Card sx={{ maxWidth: 345 }} onClick={handleTeamClick}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -26,7 +32,7 @@ const TeamTile: React.FC<TeamTileProps> = ({ teamName, thumbnail }) => {
                     </CardContent>
                 </CardActionArea>
             </Card>
-        </Link>
+      
     );
 };
 

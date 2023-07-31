@@ -6,7 +6,7 @@ import redbull from '../assets/bull.jsp.jpg'
 
 const teamData: TeamTileProps[] = [
     { teamName: 'Petronas', thumbnail: hamilton },
-    { teamName: 'Red Bull Racing', thumbnail: redbull },
+    { teamName: 'Red Bull', thumbnail: redbull },
     { teamName: 'Aston Martin', thumbnail: redbull },
     { teamName: 'Ferrari', thumbnail: redbull },
     { teamName: 'McLaren', thumbnail: redbull },
